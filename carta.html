@@ -121,15 +121,14 @@
     transition: opacity 0.8s ease;
   }
 
-  /* Nueva animación para cuando el sobre desaparece */
   @keyframes vanish {
     from { opacity: 1; transform: scale(1); }
     to { opacity: 0; transform: scale(0.8); }
   }
 
-.envelope.vanish {
-  animation: vanish 0.8s forwards ease;
-}
+  .envelope.vanish {
+    animation: vanish 0.8s forwards ease;
+  }
 
   /* ====== CARTA ====== */
   #letter {
@@ -154,8 +153,8 @@
   .navigation {
     margin-top: 20px;
     display: flex;
-   justify-content: center;   /* Centra horizontalmente */
-   gap: 15px;                 /* Espacio entre botones */
+    justify-content: center;
+    gap: 15px;
   }
 
   .navigation button {
@@ -179,10 +178,10 @@
   }
 
   #page16 {
-  line-height: 1.6;
-}
+    line-height: 1.6;
+  }
 
-.boton-estilo {
+  .boton-estilo {
     padding: 12px 25px;
     background: #ff4f6d;
     color: white;
@@ -192,15 +191,96 @@
     font-size: 16px;
     font-weight: bold;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
+  }
 
-.boton-estilo:hover {
+  .boton-estilo:hover {
     transform: scale(1.05);
     box-shadow: 0 0 10px rgba(255, 79, 109, 0.7);
-}
+  }
 
- 
+  /* ============================= */
+  /*        MEDIA QUERIES          */
+  /* ============================= */
+
+  /* Teléfonos pequeños */
+  @media (max-width: 480px) {
+
+    body {
+      padding: 10px;
+      overflow: auto;
+    }
+
+    .envelope {
+      width: 220px;
+      height: 150px;
+    }
+
+    .flap {
+      border-left-width: 110px;
+      border-right-width: 110px;
+      border-top-width: 73px;
+    }
+
+    .letter-sheet {
+      width: 190px;
+    }
+
+    #letter {
+      width: 90%;
+      padding: 25px;
+      font-size: 1em;
+    }
+
+    .page {
+      font-size: 1.05em;
+    }
+
+    .navigation button {
+      padding: 8px 12px;
+      font-size: 0.9em;
+    }
+
+    .boton-estilo {
+      padding: 10px 20px;
+      font-size: 14px;
+    }
+  }
+
+  /* Teléfonos y tablets medianas */
+  @media (max-width: 768px) {
+
+    .envelope {
+      width: 250px;
+      height: 165px;
+    }
+
+    .flap {
+      border-left-width: 125px;
+      border-right-width: 125px;
+      border-top-width: 80px;
+    }
+
+    .letter-sheet {
+      width: 210px;
+    }
+
+    #letter {
+      width: 85%;
+      padding: 30px;
+    }
+
+    .page {
+      font-size: 1.1em;
+    }
+
+    .navigation button {
+      padding: 10px 15px;
+      font-size: 1em;
+    }
+
+  }
 </style>
+
 
 </head>
 <body>
